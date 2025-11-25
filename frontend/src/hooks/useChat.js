@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { sendMessageToApi } from "../api/chatApi";
+import { sendMessageToApi } from "../services/chatApi";
 
 
 // Custom chat hook
