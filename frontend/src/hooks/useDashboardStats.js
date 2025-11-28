@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDashboardStats } from "../api/dashboardApi";
+import { getDashboardStats } from "../services/dashboardApi";
 
 
 // Dashboard statistics hook
@@ -10,6 +10,7 @@ const [stats, setStats] = useState(null);
 useEffect(() => {
 getDashboardStats().then(setStats);
 }, []);
+
 
 
 return stats;
