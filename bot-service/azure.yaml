@@ -1,0 +1,9 @@
+# Name of the application.
+name: <YOUR_APP_SERVICE_NAME_GOES_HERE>
+metadata:
+  template: <YOUR_APP_SERVICE_NAME_GOES_HERE>@0.0.1-beta
+services:
+  web:
+    project: .
+    language: python
+    host: appservice
