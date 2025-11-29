@@ -1,7 +1,7 @@
 import azure.functions as func
 import os
 import logging
-from openai import OpenAI
+from openai import AzureOpenAI
 
 app = func.FunctionApp()
 
@@ -24,9 +24,14 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
         api_key = os.environ.get("AZURE_OPENAI_API_KEY")
         deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT")
 
-        client = OpenAI(
-            base_url=f"{endpoint}/openai/v1/",
-            api_key=api_key
+        # client = OpenAI(
+        #     base_url=f"{endpoint}/openai/v1/",
+        #     api_key=api_key
+        # )
+        client = AzureOpenAI(
+            azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
+            api_key=os.environ["AZURE_OPENAI_API_KEY"],
+            api_version="2024-08-01-preview"
         )
 
         completion = client.chat.completions.create(
