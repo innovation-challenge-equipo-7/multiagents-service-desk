@@ -1,5 +1,4 @@
-# 📘 Azure Functions – Chat Backend (Python + Azure OpenAI)
-### *(Windows Development Guide – Git Bash / PowerShell)*
+# 📘 Multiagents for Service Desk
 
 This project contains an **Azure Function** that exposes an HTTP `/chat` endpoint powered by **Azure OpenAI** (GPT-4.1, GPT-4o, etc.).  
 It is designed for **bots**, **Microsoft Teams integrations**, and **web applications** that require conversational AI.
@@ -23,8 +22,10 @@ It is designed for **bots**, **Microsoft Teams integrations**, and **web applica
 ---
 
 ##  Project Description 
-This project implements a **Python-based Azure Functions backend** that receives messages at the `/chat` endpoint and generates responses using **Azure OpenAI GPT**.  
-It is ideal for chat integrations in web apps or Microsoft Teams.
+This project implements a Python-based Azure Functions Backend that exposes the /chat endpoint, making it ideal for chat integrations in web applications or Microsoft Teams. This backend serves as the gateway for an advanced Artificial Intelligence–powered system that uses Azure OpenAI GPT and a Multi-Agent Architecture to generate responses. The User’s request is processed by an Agent Orchestrator, which dynamically routes the task to the most suitable agent: the Knowledge Agent to retrieve contextual information from a Vector Database, the Execution Agent to perform actions by interacting with external APIs or services, or the Escalation Agent to assist in planning complex tasks. This modular design ensures that requests are broken down, efficiently handled by AI specialists, and the coherent response is sent back to the user through the same channel.
+
+![Multiagents Architecture](./images/multiagents-architecture.png)
+
 
 ---
 
