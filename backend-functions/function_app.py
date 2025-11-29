@@ -20,14 +20,6 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
                 status_code=400
             )
 
-        endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
-        api_key = os.environ.get("AZURE_OPENAI_API_KEY")
-        deployment = os.environ.get("AZURE_OPENAI_DEPLOYMENT")
-
-        # client = OpenAI(
-        #     base_url=f"{endpoint}/openai/v1/",
-        #     api_key=api_key
-        # )
         client = AzureOpenAI(
             azure_endpoint=os.environ["AZURE_OPENAI_ENDPOINT"],
             api_key=os.environ["AZURE_OPENAI_API_KEY"],
@@ -35,14 +27,13 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
         )
 
         completion = client.chat.completions.create(
-            model=deployment,
+            model=os.environ["AZURE_OPENAI_DEPLOYMENT"],
             messages=[{"role": "user", "content": user_message}]
         )
 
-        return func.HttpResponse(
-            completion.choices[0].message["content"],
-            status_code=200
-        )
+        response_text = completion.choices[0].message.content
+
+        return func.HttpResponse(response_text, status_code=200)
 
     except Exception as e:
         logging.error(f"❌ Error: {e}")
