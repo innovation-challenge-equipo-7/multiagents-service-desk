@@ -1,16 +1,95 @@
-# React + Vite
+# 🖥️ Frontend – AI Support Desk  
+### React + TailwindCSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend for the **AI Support Desk** platform, built with **React** and **TailwindCSS**, designed to integrate with an Azure Functions backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies
 
-## React Compiler
+- React 18  
+- Vite  
+- TailwindCSS  
+- React Router DOM  
+- Axios  
+- React Icons  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/your-user/your-frontend.git
+cd your-frontend
+npm install
+
+
+```
+## ▶️ Development Server
+
+    npm run dev
+
+
+## Application runs at:
+
+    http://localhost:5173
+
+
+## 🔌 Backend Configuration
+
+Create a .env file in the project root:
+
+    VITE_API_URL=https://your-backend.azurewebsites.net/api/chat
+
+
+Usage example:
+
+    axios.post(import.meta.env.VITE_API_URL, { message });
+
+## 📦 Production Build
+    npm run build
+
+
+Output files will be generated in:
+
+    dist/
+
+## 📁 Project Structure
+        src/
+        │── components/
+        │── pages/
+        │── context/
+        │── hooks/
+        │── App.jsx
+        │── main.jsx
+
+## 🎨 TailwindCSS Configuration
+
+    tailwind.config.js:
+
+    export default {
+    content: [
+        "./index.html",
+        "./src/**/*.{js,jsx,ts,tsx}",
+    ],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+    }
+
+## 📄 License
+
+MIT License.
+
+
+---
+
+If you want, I can also generate:
+
+✅ A more corporate version  
+✅ A version with shields/badges  
+✅ A version including screenshots  
+✅ Deployment instructions (Azure, Netlify, Vercel, etc.)
+
+Just tell me!

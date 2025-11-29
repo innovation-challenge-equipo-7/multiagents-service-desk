@@ -6,7 +6,7 @@ export default function ChatPage() {
   const { messages, loading, sendMessage } = useChat();
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col w-full h-full justify-start pb-16 ">
       <ChatContainer messages={messages} loading={loading} />
       <ChatInput onSend={sendMessage} />
     </div>
