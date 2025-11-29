@@ -1,5 +1,6 @@
 import azure.functions as func
 import os
+import json
 import logging
 from openai import AzureOpenAI
 
@@ -33,8 +34,17 @@ def chat(req: func.HttpRequest) -> func.HttpResponse:
 
         response_text = completion.choices[0].message.content
 
-        return func.HttpResponse(response_text, status_code=200)
+        return func.HttpResponse(
+            json.dumps({"reply": response_text}, ensure_ascii=False),
+            status_code=200,
+            headers={"Content-Type": "application/json"}
+        )
 
     except Exception as e:
         logging.error(f"❌ Error: {e}")
-        return func.HttpResponse(str(e), status_code=500)
+        # return func.HttpResponse(str(e), status_code=500)
+        return func.HttpResponse(
+            json.dumps({"error": str(e)}, ensure_ascii=False),
+            status_code=500,
+            headers={"Content-Type": "application/json"}
+        )
