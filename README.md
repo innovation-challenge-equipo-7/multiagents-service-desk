@@ -161,11 +161,12 @@ git checkout -b feature/my-feature
 
 ## 🎥 Demo Video – Team 7
 
+## 🎥 Demo Video – Team 7
 
+[![Demo Team 7](./images/Team7-demo.bmp)](https://raw.githubusercontent.com/innovation-challenge-equipo-7/multiagents-service-desk/main/demo/demoTeam7-demo.mp4)
 
-https://raw.githubusercontent.com/innovation-challenge-equipo-7/multiagents-service-desk/main/demo/demoTeam7-demo.mp4
+“If the video does not load on GitHub, you can download it using the link above.”
 
-(GitHub no reproduce videos MP4 en línea, pero puedes abrir el enlace directamente para verlo.)
 
 📺 Vista previa
 
