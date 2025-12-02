@@ -158,6 +158,32 @@ git checkout -b feature/my-feature
 
 3️⃣ Push and create a Pull Request.
 
+
+## 🎥 Demo Video – Team 7
+
+<video src="./demo/demoTeam7-demo.mp4" controls width="800"></video>
+
+
+If the video does not load, you can download it directly:
+
+➡️ https://github.com/innovation-challenge-equipo-7/multiagents-service-desk/raw/main/Team7-demo.mp4
+
+
+## 👥 Team 7 — Collaborators
+
+- **Evelyn Quevedo Garrido**  
+  🔗  https://github.com/evymari
+- **María Cristina Montoya**   
+  🔗 https://github.com/mcml1225
+
+- **Stalin Maza**  
+  
+  🔗 GitHub: 
+https://github.com/StalinMazaEpn
+- **Reewos Talla Chumpitaz**  
+  
+  🔗 https://github.com/reewos
+
 📄 License
 
 This project is licensed under the MIT License.
