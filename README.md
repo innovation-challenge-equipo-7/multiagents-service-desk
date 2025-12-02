@@ -161,12 +161,13 @@ git checkout -b feature/my-feature
 
 ## 🎥 Demo Video – Team 7
 
-<video src="./demo/demoTeam7-demo.mp4" controls width="800"></video>
 
 
-If the video does not load, you can download it directly:
+https://raw.githubusercontent.com/innovation-challenge-equipo-7/multiagents-service-desk/main/demo/demoTeam7-demo.mp4
 
-➡️ https://github.com/innovation-challenge-equipo-7/multiagents-service-desk/raw/main/Team7-demo.mp4
+(GitHub no reproduce videos MP4 en línea, pero puedes abrir el enlace directamente para verlo.)
+
+📺 Vista previa
 
 
 ## 👥 Team 7 — Collaborators
@@ -184,6 +185,4 @@ https://github.com/StalinMazaEpn
   
   🔗 https://github.com/reewos
 
-📄 License
-
-This project is licensed under the MIT License.
+"Thank you for visiting our project! 🎉"
